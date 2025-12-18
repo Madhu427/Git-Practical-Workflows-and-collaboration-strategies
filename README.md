@@ -20,6 +20,31 @@ o	Create and switch to your new branch with one command: git checkout -b feature
 4.	Push your feature branch to the remote repository: To share your work with your team, you'll need to push your feature branch to the remote repository.
 •	Use the command: git push -u origin feature.
 This sets up your local branch to track the remote branch.
+##################################################################################################################################################
+Task 4: Collaboration and Pull Requests
+Now that your feature is complete on its own branch, you need to get it reviewed and merged into the main codebase. This is done through a Pull Request (PR).
+Step-by-step instructions:
+1.	Go to your Git hosting service (e.g., GitHub): After pushing your branch, the hosting service will often show a notification to create a new pull request. If not, navigate to the "Pull Requests" or "Merge Requests" tab.
+ 
+2.	Create a new Pull Request:
+o	Select your feature branch (feature/your-feature-name) as the "source" or "compare" branch.
+o	Select the develop branch as the "target" or "base" branch.
+o	Provide a clear and descriptive title for your PR (e.g., "new file f1.txt added").
+o	Write a detailed description explaining the changes you made, why they were needed, and what a reviewer should look for.
+ 
+3.	Request a code review:
+o	Assign the PR to one or more teammates for a code review.
+o	Collaborate with your teammates, addressing any comments or suggestions they have by making new commits to your feature branch.
+o	Once the reviewers approve your changes, the PR can be merged.
+
+4.	Merge the Pull Request:
+o	Once the code is approved and passes all necessary checks (like CI tests), an authorized person can click the "Merge" button.
+o	This will merge your feature branch's changes into the develop branch.
+o	After the merge, you can safely delete the feature branch both locally and on the remote.
+ 
+
+ 
+
 
 
 
