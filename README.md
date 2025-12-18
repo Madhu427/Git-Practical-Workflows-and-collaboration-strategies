@@ -10,3 +10,5 @@ Step-by-step instructions:
 1.	Ensure you are on the d branch: The Git Flow model uses a main develop branch for all feature integration. Before you start, make sure your local repository is up-to-date with the remote develop branch.
 	First, switch to the develop branch: git checkout master.
   Then, pull the latest changes from the remote: git pull origin master. 
+
+2.new branch feature created.
