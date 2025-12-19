@@ -42,11 +42,3 @@ o	Once the code is approved and passes all necessary checks (like CI tests), an 
 o	This will merge your feature branch's changes into the develop branch.
 o	After the merge, you can safely delete the feature branch both locally and on the remote.
  
-
- 
-
-
-
-
-
-
