@@ -64,5 +64,15 @@ o	After resolving the conflicts in the file, add the file to the staging area: g
 o	Commit the merge: git commit -m "Resolve merge conflict in <file-name>".
 o	Push your branch with the resolved conflicts to the remote: git push origin feature/your-feature-name.
 
- 
 #####################################################################
+Task 6: Creating a Release and Tagging
+This task requires you to create a tag for a specific version of your application, which is a common practice for marking release points.
+Step-by-step instructions:
+1.	Ensure you are on the correct branch: Releases are typically created from a stable branch, such as main or master. First, switch to that branch and make sure it's up to date.
+o	git checkout master
+o	git pull origin master
+2.	Create a new tag: You can create a lightweight or annotated tag. It is best practice to use annotated tags for releases, as they store more metadata like the tagger name, date, and a message.
+o	Use the command: git tag -a v1.0 -m "Release version 1.0".
+o	The -a flag creates an annotated tag, and the -m flag adds a message. A common naming convention is to use a v prefix followed by the version number, like v1.0.
+3.	Push the tag to the remote repository: By default, git push does not push tags. You must explicitly push them to the remote repository.
+o	Push the specific tag you just created: git push origin v1.0
