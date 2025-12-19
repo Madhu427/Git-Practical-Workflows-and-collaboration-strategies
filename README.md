@@ -76,3 +76,27 @@ o	Use the command: git tag -a v1.0 -m "Release version 1.0".
 o	The -a flag creates an annotated tag, and the -m flag adds a message. A common naming convention is to use a v prefix followed by the version number, like v1.0.
 3.	Push the tag to the remote repository: By default, git push does not push tags. You must explicitly push them to the remote repository.
 o	Push the specific tag you just created: git push origin v1.0
+
+################################################################
+Task 7: Hotfix in Production
+1.	Create a hotfix branch: Hotfixes are worked on in a dedicated branch, usually created directly from the stable release point (v1.0 in this case). This prevents the hotfix from including any new features that are currently in development.
+o	git checkout -b hotfix/critical-bug v1.0
+o	This command creates a new branch named hotfix/critical-bug and checks it out, with its starting point at the v1.0 tag.
+ 
+2.	Make and commit the fix:
+o	Make the necessary code changes to fix the bug.
+o	Add the changes to the staging area: git add .
+o	Commit the fix with a clear message: git commit -m "Hotfix line added in Read me"
+ 
+3.	Merge the hotfix back to the stable branch: After the fix is complete, you must merge it into your stable branch (e.g., main).
+o	git checkout master
+o	git merge hotfix/critical-bug
+ 
+4.	Tag the new release: After applying the hotfix, you should create a new tag to mark this new version. Use a patch version number, such as v1.0.1.
+o	git tag -a v1.0.1 -m "Hotfix applied"
+o	Push the new tag to the remote repository: git push origin v1.0.1
+ 
+5.	Clean up: Once the hotfix has been merged into all necessary branches and tagged, you can delete the hotfix branch.
+o	git branch -d hotfix/critical-bug (local)
+
+
