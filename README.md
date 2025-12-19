@@ -99,4 +99,26 @@ o	Push the new tag to the remote repository: git push origin v1.0.1
 5.	Clean up: Once the hotfix has been merged into all necessary branches and tagged, you can delete the hotfix branch.
 o	git branch -d hotfix/critical-bug (local)
 
+##########################################################################
+
+Task 8: Stashing Changes
+Step-by-step instructions:
+1.	Check your status: Before you do anything, check the status of your working directory to see which files you have modified.
+o	Use the command: git status
+2.	Stash your changes: To save your uncommitted changes, use the git stash command. This cleans your working directory and adds all modified files to a temporary "stash" list.
+o	Use the command: git stash save "Work in progress on feature branch"
+o	The optional message helps you remember what the stash contains, which is especially useful if you have multiple stashes.
+ 
+
+3.	Switch branches and handle the urgent issue: Now that you’re working directory is clean, you can safely switch to the new branch to address the urgent issue.
+•	Use the command: git checkout master
+•	Make the necessary changes, commit them, and push them to the remote repository.
+ 
+
+4.	Return to your original branch and restore your work: After you've finished with the urgent issue, you can switch back to your original branch and restore your stashed changes.
+o	Switch back: git checkout feature
+o	To see your stash(es): git stash list
+o	To restore your latest stashed changes: git stash pop
+o	git stash pop applies the changes and removes them from the stash list. If you need to keep the changes in the stash, you can use git stash apply instead.
+
 
