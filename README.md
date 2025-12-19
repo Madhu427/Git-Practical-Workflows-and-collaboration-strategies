@@ -121,10 +121,16 @@ o	To see your stash(es): git stash list
 o	To restore your latest stashed changes: git stash pop
 o	git stash pop applies the changes and removes them from the stash list. If you need to keep the changes in the stash, you can use git stash apply instead.
 
+##################################################################################
+Task 9: Cherry-Picking a Commit
+1.	Find the commit hash: First, you need to find the unique identifier (commit hash) of the commit you want to copy. You can do this by looking at the commit history of the other branch.
+o	Switch to the branch where the desired commit is located: git checkout <other-branch-name>
+o	View the commit history with git log --oneline. This will show you a list of commits with their abbreviated hashes. * Copy the hash of the commit you want to cherry-pick.
+2.	Switch to your target branch: Now, switch to the branch where you need the fix to be applied.
+o	Use the command: git checkout feature
+3.	Cherry-pick the commit: Use the git cherry-pick command followed by the commit hash you copied in the first step.
+o	Use the command: git cherry-pick <commit-hash>
+o	Git will now apply that single commit to your current branch. This may cause a merge conflict if the changes clash with your current work. If a conflict occurs, you must resolve it manually before you can proceed.
+4.	Push the new commit: After cherry-picking, the new commit will be part of your current branch's history. You can now push your changes to the remote repository.
+o	Use the command: git push origin feature
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> d361a93113ec2c0940419ee13910338fc196e7b5
