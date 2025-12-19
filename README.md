@@ -122,3 +122,9 @@ o	To restore your latest stashed changes: git stash pop
 o	git stash pop applies the changes and removes them from the stash list. If you need to keep the changes in the stash, you can use git stash apply instead.
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> d361a93113ec2c0940419ee13910338fc196e7b5
