@@ -41,4 +41,28 @@ o	Once the reviewers approve your changes, the PR can be merged.
 o	Once the code is approved and passes all necessary checks (like CI tests), an authorized person can click the "Merge" button.
 o	This will merge your feature branch's changes into the develop branch.
 o	After the merge, you can safely delete the feature branch both locally and on the remote.
+#####################################################################
+Task 5: Handling Merge Conflicts
+Merge conflicts occur when changes made in two different branches clash. This scenario happens when a teammate pushes conflicting changes to main while you're 
+Step-by-step instructions:
+1.	Update your local main or master branch:
+o	Before merging your feature branch, always ensure your target branch (master) is up to date.
+o	Switch to the develop branch: git checkout master.
+o	Pull the latest changes: git pull origin master.
+2.	Merge feature into your master branch:
+o	Switch back to your feature branch: git checkout master.
+o	Merge the latest changes from develop into your feature branch: git merge feature.
+o	* If Git can't automatically merge, it will notify you of a conflict in a specific file. The file will contain conflict markers like `<<<<<<<`, `=======`, and `>>>>>>>`.
+o	
+3.	Resolve the conflicts manually:
+o	Open the conflicted file in your code editor.
+o	The markers show the changes from your current branch (<<<<<<< HEAD) and the incoming changes (>>>>>>> develop).
+o	Manually edit the file to keep the correct code, which might be one or both sets of changes.
+o	Delete the conflict markers.
+4.	Commit the resolved changes:
+o	After resolving the conflicts in the file, add the file to the staging area: git add <conflicted-file-name>.
+o	Commit the merge: git commit -m "Resolve merge conflict in <file-name>".
+o	Push your branch with the resolved conflicts to the remote: git push origin feature/your-feature-name.
+
  
+#####################################################################
