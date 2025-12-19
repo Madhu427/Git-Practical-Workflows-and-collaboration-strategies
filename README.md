@@ -134,3 +134,9 @@ o	Git will now apply that single commit to your current branch. This may cause a
 4.	Push the new commit: After cherry-picking, the new commit will be part of your current branch's history. You can now push your changes to the remote repository.
 o	Use the command: git push origin feature
 
+############################################################
+Task 12: Squashing Commits
+1.	Start an interactive rebase: You will use an interactive rebase to "squash" the commits. You need to know how many commits you want to combine.
+o	Let's say you have the last 3 commits you want to squash. Use the following command:
+o	git rebase -i HEAD~3
+o	The -i flag starts the interactive session. HEAD~3 tells Git to look at the last three commits from your current position.
